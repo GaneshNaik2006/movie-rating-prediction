@@ -1,0 +1,33 @@
+{
+    "best_model": "Ridge Regression",
+    "test_rmse": 0.5993,
+    "test_mae": 0.4837,
+    "test_r2": 0.5136,
+    "candidate_results": {
+        "Ridge Regression": {
+            "RMSE": 0.5993,
+            "MAE": 0.4837,
+            "R2": 0.5136
+        },
+        "Random Forest": {
+            "RMSE": 0.6087,
+            "MAE": 0.4812,
+            "R2": 0.4982
+        },
+        "Gradient Boosting": {
+            "RMSE": 0.6032,
+            "MAE": 0.4836,
+            "R2": 0.5072
+        },
+        "XGBoost Regressor": {
+            "RMSE": 0.6009,
+            "MAE": 0.4848,
+            "R2": 0.5111
+        },
+        "LightGBM Regressor": {
+            "RMSE": 0.6071,
+            "MAE": 0.4863,
+            "R2": 0.5009
+        }
+    }
+}
