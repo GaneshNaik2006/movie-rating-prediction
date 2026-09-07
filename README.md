@@ -6,6 +6,12 @@ Includes a complete data preprocessing pipeline, multi-model benchmark evaluatio
 
 ---
 
+## 🌐 Live Web Application
+Visit the deployed application on Streamlit Community Cloud:  
+👉 **[https://movie-rating-prediction-aiacrkhcysfurgjbld5ig9.streamlit.app/](https://movie-rating-prediction-aiacrkhcysfurgjbld5ig9.streamlit.app/)**
+
+---
+
 ## Project Architecture & Workflow
 
 ```mermaid
@@ -104,7 +110,6 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
-Open **http://localhost:8501** in your browser to make live rating predictions.
 
 ### Run Terminal Prediction (CLI)
 ```bash
