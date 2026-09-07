@@ -65,12 +65,16 @@ st.markdown('<div class="sub-title">Predict IMDb / TMDB ratings using Machine Le
 def get_pipeline():
     model_path = "models/movie_rating_model.joblib"
     if not os.path.exists(model_path):
-        return None
+        st.info("⚡ First-time setup: Training model pipeline on server...")
+        from src.train import train_and_evaluate_models
+        train_and_evaluate_models(data_path="data/movies.csv", model_output_path=model_path)
     return load_prediction_pipeline(model_path)
 
 @st.cache_data
 def get_metrics():
     metrics_path = "models/metrics.json"
+    if not os.path.exists(metrics_path):
+        get_pipeline()
     if os.path.exists(metrics_path):
         with open(metrics_path, "r") as f:
             return json.load(f)
@@ -79,6 +83,8 @@ def get_metrics():
 @st.cache_data
 def get_dataset():
     data_path = "data/movies.csv"
+    if not os.path.exists(data_path):
+        get_pipeline()
     if os.path.exists(data_path):
         return pd.read_csv(data_path)
     return None
